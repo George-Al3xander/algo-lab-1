@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+#define PI 3.14159265358979323846
 int main() {
     int a, b, c;
    
@@ -11,32 +11,31 @@ int main() {
     scanf("%d", &b);
 
     printf("Enter C: ");// Введіть сторону C
-    scanf("%d", &c);
+    scanf("%d", &c); 
 
     
+   
+    double angle_A = acos((b * b + c * c - a * a) / (2.0 * b * c)) * 180.0 / PI; // кут  А
+    double angle_B = acos((a * a + c * c - b * b) / (2.0 * a * c)) * 180.0 / PI; // кут  B
+    double angle_C = acos((b * b + a * a - c * c) / (2.0 * b * a)) * 180.0 / PI; // кут  C
+     //Домножуємо на 180.0 / PI, щоб перевсти значення з радіан у градуси
 
-    int angle_A = acos((pow(2, b) + pow(2, c) - pow(2, a)) / (2 * b * c)); // кут  А
-    int angle_B = acos((pow(2, a) + pow(2, c) - pow(2, b)) / (2 * a * c)); // кут  B
-    int angle_C = acos((pow(2, b) + pow(2, a) - pow(2, c)) / (2 * b * a)); // кут  C
-    
+     
     int p = (a + b + c) / 2; // Напівпериметр
 
     int square = sqrt(p * (p - a) * (p - b) * (p - c)); // Площа
-    printf("\n"); 
-    printf("a: %d \n" ,a); 
-    printf("\n"); 
-    printf("b: %d \n" ,b);
-    printf("\n"); 
-    printf("c: %d \n" ,c);
-    printf("\n"); 
-    printf("Angle a: %d \n" ,angle_A);
-    printf("\n"); 
-    printf("Angle b: %d \n" ,angle_B);
-    printf("\n"); 
-    printf("Angle c: %d \n" ,angle_C);
-    printf("\n"); 
-    printf("S: %d \n" ,square);
     
-
+    printf("\n");    
+    
+    printf("a: %d \n" ,a);     
+    printf("b: %d \n" ,b);    
+    printf("c: %d \n" ,c);    
+    printf("Angle a: %.2f \n" ,angle_A );  
+    printf("Angle b: %.2f \n" ,angle_B );    
+    printf("Angle c: %.2f \n" ,angle_C );    
+    printf("P: %d \n" ,p);
+    printf("S: %d \n" ,square);
+    printf("\n"); 
+    
     return 0;
 }

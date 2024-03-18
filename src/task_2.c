@@ -17,10 +17,10 @@ int main() {
 
     double w = acos(5.0 * x) + sqrt(log10(v)) + pow(a, 3) * z + y;
 
-    printf("v: %d \n", z);
-    printf("y: %d \n", z);
-    printf("z: %d \n", z);
-    printf("w: %d \n", z);
+    printf("v: %lf \n", v);
+    printf("y: %lf \n", y);
+    printf("z: %lf \n", z);
+    printf("w: %lf \n", w);
 
 
     return 0;

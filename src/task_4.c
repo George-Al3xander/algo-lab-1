@@ -14,9 +14,9 @@ int main() {
     scanf("%lf", &x);
     
 
-    switch (pow(c, 2.0) - x > 0) {
+    switch (c * c - x > 0) {
         case 1:
-            g = 1.9 * pow(a, -x);
+            g = 1.90 * pow(a, (0-x));
             break;
         case 0:
             g = ((0.94 + a) / c) * pow(exp(1), x);

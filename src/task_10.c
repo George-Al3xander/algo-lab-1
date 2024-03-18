@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define ARRAY_SIZE 5 // Розмір масиву
+#define ARRAY_SIZE 20 // Розмір масиву
 
 int main() {
     int C[ARRAY_SIZE];
@@ -22,8 +22,15 @@ int main() {
         }         
     }
 
+    printf("C: ");
+    for(int i = 0; i < ARRAY_SIZE; i++) {
+        printf("%d, ", C[i]); // Введіть елемент
+      
+    }
+    printf("\n");
+
     if(count > 0) {
-        double geom = pow(product, 1/count);
+        double geom = pow(product, 1.0/count);
         printf("Geom: %lf \n", geom);
     } else {
         printf(":( \n");

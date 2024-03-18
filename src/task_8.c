@@ -5,12 +5,12 @@
 
 int main() {
     double 
-        w = 4.2, // Initialization of 'w' corrected
+        w = 4.2, 
         t = 0.0,
         y;
        
     while(t <= (PI / 2)) {
-        const double t2 = 2.0 * t; // 2t
+        const double t2 = 2.0 * t; 
 
         if((w * t) > PI) {
             y = sin(t2);

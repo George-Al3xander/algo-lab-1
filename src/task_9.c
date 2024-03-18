@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define ARRAY_SIZE 5 // Розмір масиву
+#define ARRAY_SIZE 15 // Розмір масиву
 
 int main() {
     int A[ARRAY_SIZE];
@@ -12,7 +12,7 @@ int main() {
     //Цикл для заповнення масиву
     for(int i = 0; i < ARRAY_SIZE; i++) {
         printf("Enter %d element: ", i+1); // Введіть елемент
-         scanf("%d", &A[i]);
+        scanf("%d", &A[i]);
     }
 
     max = A[0];
@@ -24,9 +24,15 @@ int main() {
         }
         if(A[i] < A[minIndex]) {
             minIndex = i;
-        }
-         
+        }         
     }
+
+    printf("A: ");
+    for(int i = 0; i < ARRAY_SIZE; i++) {
+        printf("%d, ", A[i]); // Введіть елемент
+      
+    }
+    printf("\n");
     printf("Maximum element: %d \n", max);
     printf("Minimum index: %d", minIndex);
     return 0;

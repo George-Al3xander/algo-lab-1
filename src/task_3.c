@@ -23,6 +23,8 @@ int main() {
     printf("\n");
     printf("a: %d\n", a);
     printf("b: %d\n", b);
+    printf("max: %d\n", max);
+    printf("min: %d\n", min);
     printf("w: %f\n", w); 
 
     return 0;

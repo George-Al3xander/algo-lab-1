@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define ARRAY_SIZE 5 // Розмір масиву
+#define ARRAY_SIZE 15 // Розмір масиву
 
 int main() {
     int Z[ARRAY_SIZE];
